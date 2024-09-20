@@ -8,14 +8,14 @@ import { nanoid } from '@reduxjs/toolkit';
 import { addTextBox} from '../features/textadd/textaddSlice';
 import { updateTextBox } from '../features/textadd/textaddSlice';
 import { deleteTextBox } from '../features/textadd/textaddSlice';
-console.log("hiii");
+
 function Home() {
     const textBoxes = useSelector(state => state.todos);
     const [fontSize, setFontSize] = useState(16);
     const [color, setColor]= useState( '#ffffff');
     const [selectedBox, setSelectedBox] =useState('');
     const dispatch = useDispatch();
-    
+    const src= "https://ia800207.us.archive.org/15/items/BigBuckBunny_124/Content/big_buck_bunny_720p_surround.mp4";
     const handleAddText =() =>{
         const newBox ={
             id:nanoid(),
@@ -48,8 +48,8 @@ function Home() {
       <div className="left-panel">
       <div className="video-wrapper">
         <video  controls>
-          <source src="https://www.youtube.com/watch?v=1i04-A7kfFI&t=2634s" type="video/mp4" />
-          <source src="https://www.youtube.com/watch?v=1i04-A7kfFI&t=2634s" type="video/ogg" />
+          <source src={src} type="video/mp4" />
+          <source src={src} type="video/ogg" />
           your  browser dose not support the video tag
         </video>
         
