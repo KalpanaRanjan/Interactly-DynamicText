@@ -1,0 +1,61 @@
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.left-panel {
+  flex: 2;
+  position: relative;
+}
+
+.right-panel {
+  flex: 1;
+  padding: 20px;
+}
+
+.video-wrapper {
+  position: relative;
+  height: 360px;
+  width: 660px;
+}
+video{
+  width: 100%;
+  height: 100%;
+}
+
+.text-box {
+  position: absolute;
+  border: 1px solid black;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 5px;
+  resize: both;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+
+.text-box p{
+  margin: 0;
+  padding-right: 10px;
+}
+
+.text-box button{
+  margin-left: 5px;
+}
+.add-text-btn {
+  padding: 10px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+.config-panel {
+  margin-top: 10px;
+}
+
+.config-panel input {
+  margin-top: 5px;
+  display: block;
+}
